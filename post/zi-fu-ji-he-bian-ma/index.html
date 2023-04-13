@@ -1,0 +1,295 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>字符集和编码 | 银河漫游指南</title>
+<link rel="shortcut icon" href="https://blog.yhkang.net/favicon.ico?v=1681349175970">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://blog.yhkang.net/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="字符集和编码 | 银河漫游指南 - Atom Feed" href="https://blog.yhkang.net/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="ASCII
+
+一个字节8位，可以表示256个状态
+第一位是0，0~127，数字、大小写英文字母、标点符号、空格、控制符等
+扩展128~255，Latin-1字符集
+
+汉字编码
+
+GB2312
+
+两个大于127的字节组合编码，一共收录了744..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://blog.yhkang.net">
+  <img class="avatar" src="https://blog.yhkang.net/images/avatar.png?v=1681349175970" alt="">
+  </a>
+  <h1 class="site-title">
+    银河漫游指南
+  </h1>
+  <p class="site-description">
+    Life, the universe, and everything
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              字符集和编码
+            </h2>
+            <div class="post-info">
+              <span>
+                2023-03-30
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <h2 id="ascii"><a href="https://zh.wikipedia.org/wiki/ASCII">ASCII</a></h2>
+<ul>
+<li>一个字节8位，可以表示256个状态</li>
+<li>第一位是0，0~127，数字、大小写英文字母、标点符号、空格、控制符等</li>
+<li>扩展128~255，Latin-1字符集</li>
+</ul>
+<h2 id="汉字编码">汉字编码</h2>
+<ul>
+<li><a href="https://zh.wikipedia.org/zh-hans/GB_2312">GB2312</a>
+<ul>
+<li>两个大于127的字节组合编码，一共收录了7445个字符，包括6763个汉字和682个其它符号。</li>
+<li>全角符号（数字、英文字母、标点符号）</li>
+<li>生僻字存不下。<a href="https://www.google.com/search?q=%E6%9C%B1%EF%BC%88%E5%AE%B9%E5%8A%A0%E9%87%91%E6%97%81%EF%BC%89%E5%9F%BA&amp;sourceid=chrome&amp;ie=UTF-8">Google搜索: 朱（容加金旁）基</a></li>
+<li><img src="https://blog.yhkang.net/post-images/1681308640825.png" alt="朱总理强调：国企改革和发展是经济工作重中之重" loading="lazy"></li>
+</ul>
+</li>
+<li><a href="https://zh.wikipedia.org/zh-hans/GBK">GBK</a>
+<ul>
+<li>只要第一个字节大于127表示是汉字，需要读取两个字节组合。收录了21886个符号，包括21003个汉字和883个其它符号。</li>
+<li><a href="https://www.google.com/search?q=%E7%94%9F%E5%83%BB%E5%AD%97+%E8%BA%AB%E4%BB%BD%E8%AF%81&amp;sourceid=chrome&amp;ie=UTF-8">Google搜索: 生僻字 身份证</a></li>
+<li><a href="https://www.thepaper.cn/newsDetail_forward_18550281">生僻姓名的人，在实名制系统之外的那些日子</a></li>
+</ul>
+</li>
+<li><a href="https://zh.wikipedia.org/zh-hans/GB_18030">GB18030</a>
+<ul>
+<li>增加少数民族文字、CJK统一汉字等</li>
+<li>采用变长多字节编码，每个字可以由1个、2个或4个字节组成。</li>
+<li>编码空间庞大，最多可定义161万个字符。</li>
+<li>完全支持Unicode，无需动用造字区即可支持中国国内少数民族文字、中日韩和繁体汉字以及emoji等字符。</li>
+<li><a href="https://m.21jingji.com/article/20200624/661c9aa172d4cc73f59fc834bf451dfe_zaker.html">一个名字带“䶮”的人开不了银行账户 探询金融系统生僻字输入解决方案</a></li>
+</ul>
+</li>
+<li><a href="https://zh.wikipedia.org/zh-cn/GB_13000">GB13000</a>
+<ul>
+<li>基本等同于UTF16编码</li>
+</ul>
+</li>
+<li>台湾的繁体字BIG5也采用了类似的编码，导致编码不互通</li>
+</ul>
+<h2 id="unicode"><a href="https://zh.wikipedia.org/zh-cn/Unicode">Unicode</a></h2>
+<ul>
+<li>Unicode，全世界所有字符统一编码</li>
+<li>Unicode 将编码空间分成 17 个平面，以 0 到 16 编号，每平面拥有65536（即2^16）个代码点，</li>
+<li>第 0 平面（或者说基本多文种平面BMP）中的码点，都可以用一个 UTF-16 单位来编码，或者以 UTF-8 来编码的话，会使用一、二或三个字节。而第 1 到 16 平面（或称辅助平面）中的码点，UTF-16 会以代理对的方式来使用，而 UTF-8 则会编码成 4 个字节。</li>
+<li><a href="https://unicode-table.com/cn/">Unicode 字符百科</a></li>
+<li>汉字：
+<ul>
+<li>BMP中，包含了27,973个汉字（中日韩表意文字+扩展A）</li>
+<li>辅助平面，中日韩表意文字扩展区B、C、D、E、F、G、H</li>
+<li><a href="https://zh.wikipedia.org/zh-hans/%E4%B8%AD%E6%97%A5%E9%9F%93%E7%B5%B1%E4%B8%80%E8%A1%A8%E6%84%8F%E6%96%87%E5%AD%97">中日韩表意文字</a> 截止2022年总计97058个</li>
+</ul>
+</li>
+<li>特殊区域
+<ul>
+<li><img src="https://blog.yhkang.net/post-images/1681316795004.png" alt="" loading="lazy"></li>
+</ul>
+</li>
+<li>易混淆，unicode hack
+<ul>
+<li>虚假的 <a href="https://www.xn--80ak6aa92e.com/">https://www.аррӏе.com/</a></li>
+<li><img src="https://blog.yhkang.net/post-images/1681316875596.png" alt="" loading="lazy"></li>
+</ul>
+</li>
+</ul>
+<h2 id="utfunicode-transformation-format">UTF（Unicode Transformation Format）</h2>
+<ul>
+<li>
+<p><a href="https://zh.wikipedia.org/zh-cn/UTF-8">UTF8</a>，变长编码，1~4个字节</p>
+<ul>
+<li><img src="https://blog.yhkang.net/post-images/1681315619042.png" alt="UTF8编码" loading="lazy"></li>
+<li>1字节：ASCII</li>
+<li>2字节：11位编码空间，拉丁字母、希腊字母等1920个字符</li>
+<li>3字节：16位编码空间，BMP所有剩余字符（2万多常用汉字）</li>
+<li>4字节：21位编码空间，辅助平面1~16（生僻字古汉字，扩展中日韩象形文字）</li>
+</ul>
+</li>
+<li>
+<p><a href="https://zh.wikipedia.org/zh-cn/UTF-16">UTF16</a></p>
+<ul>
+<li><img src="https://blog.yhkang.net/post-images/1681315754888.png" alt="UTF16编码" loading="lazy"></li>
+<li>2字节：和Unicode编码一致，所有BMP平面（2万多常用汉字）</li>
+<li>4字节：代理对，辅助平面（生僻字古汉字，扩展中日韩象形文字）</li>
+<li>Java中char采用UTF16编码，两字节</li>
+<li>UTF16LE、UTF16BE</li>
+</ul>
+</li>
+<li>
+<p><a href="https://zh.wikipedia.org/zh-cn/UTF-32">UTF32</a></p>
+</li>
+</ul>
+<h2 id="示例">示例</h2>
+<ul>
+<li>BMP
+<ul>
+<li><img src="https://blog.yhkang.net/post-images/1681316373952.png" alt="一" loading="lazy"></li>
+</ul>
+</li>
+<li>辅助平面
+<ul>
+<li>在Unicode标准中，Emoji符号被视为一种特殊字符，主要被分配在U+1F300到U+1F6FF的范围</li>
+<li><img src="https://blog.yhkang.net/post-images/1681316387304.png" alt="笑脸" loading="lazy"></li>
+</ul>
+</li>
+<li>常见乱码
+<ul>
+<li>手持两把锟斤拷，口中疾呼烫烫烫</li>
+<li><img src="https://blog.yhkang.net/post-images/1681347370583.png" alt="常见乱码" loading="lazy"></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#ascii">ASCII</a></li>
+<li><a href="#%E6%B1%89%E5%AD%97%E7%BC%96%E7%A0%81">汉字编码</a></li>
+<li><a href="#unicode">Unicode</a></li>
+<li><a href="#utfunicode-transformation-format">UTF（Unicode Transformation Format）</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B">示例</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://blog.yhkang.net/post/test/">
+              <h3 class="post-title">
+                Hello, World!
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://blog.yhkang.net/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
